@@ -1,0 +1,95 @@
+{
+  "server": {
+    "port": 4327
+  },
+  "cache": {
+    "forms": {
+      "signup": {
+        "expiry": 300,
+        "maxAttempts": 3
+      },
+      "login": {
+        "expiry": 300,
+        "maxAttempts": 3
+      },
+      "resetPassword": {
+        "expiry": 300,
+        "maxAttempts": 3
+      }
+    }
+  },
+  "clients": {
+    "gmail": {
+      "host": "smtp.domain.email",
+      "port": 587,
+      "secure": false,
+      "auth": {
+        "user": "my_user",
+        "pass": "my_passworddd"
+      }
+    },
+    "awsSesAuth": {
+      "accessKeyId": "AKIAURMKY3GFCGWBWCL7",
+      "secretAccessKey": "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",
+      "region": "eu-central-1"
+    },
+    "mailgun": {
+      "apiKey": "4686bd7902992d060db5156f1173125c-a0cfb957-23ac6c7d",
+      "domain": "volex.exchange"
+    },
+    "sendgrid": {
+      "auth": {
+        "api_user": "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"
+      },
+      "from": "info@info.stylike.io"
+    },
+    "twilio": {
+      "serviceId": "VA7ba6c557c649b81dd7f65a03909e5fff",
+      "accountSId": "AC4d8f5000f41a0c6025c1e6410b415f9f",
+      "authToken": "f755534b72d1a6af85afe5f469f747f8"
+    }
+  },
+  "files": {
+    "S3": {
+      "accessKeyId": "AKIAUG7UHE66TSUMRXGH",
+      "secretAccessKey": "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",
+      "url": "https://d2m7xaw3sumv0s.cloudfront.net/",
+      "region": "eu-central-1",
+      "bucket": "mindmint",
+      "directories": {
+        "images": "images",
+        "audios": "audios",
+        "videos": "videos",
+        "application": "application"
+      },
+      "maxFileSizeMB": {
+        "images": 20,
+        "audios": 5,
+        "videos": 15,
+        "application": 10
+      },
+      "secureLink": {
+        "expiry": 1200
+      }
+    }
+  },
+  "app": {
+    "cors": {
+      "origin": "https://www.mindmint.app"
+    },
+    "logger": {
+      "morgan": {
+        "enable": true,
+        "format": ":date[clf]    :method :url :status :remote-addr    :user-agent    [:total-time ms - :response-time ms]"
+      }
+    }
+  },
+  "RPC": {
+    "BSC": "wss://bsc-mainnet.nodereal.io/ws/v1/758fdad3e3d543a3b225e36610e98cd0",
+    "ETHEREUM" : "wss://eth-sepolia.g.alchemy.com/v2/Sr-n7_AzGmUUo5wuuzPvB9FJxTABEcQT"
+  },
+  "CONTRACT": {
+    "MIND-MINT": "0x3e23536dfBeb6dae27Bf85Df0578A75B215C17f7",
+    "MANAGER_WALLET" : "0x88C0Ee0aA456ca0F239051653380b29063E5630c"
+  }
+}
